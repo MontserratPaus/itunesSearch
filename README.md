@@ -1,6 +1,12 @@
 # React App itunes Searcher
 
-Search music from itunes api
+Search music from [iTunes API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+
+### External JavaScript framework/library:
+ - [React](https://es.reactjs.org/)
+ - [MUI (Material UI)](https://mui.com/)
+ - Package management ([npm](https://www.npmjs.com/))
+
 
 ## Available Scripts
 
