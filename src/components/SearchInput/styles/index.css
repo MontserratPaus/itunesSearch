@@ -1,0 +1,14 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar {
+    width: 45%;
+}
+
+.buttonSearch {
+    margin-left: 2% !important;
+    background-color: #333333 !important;
+}

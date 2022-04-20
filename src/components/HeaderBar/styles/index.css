@@ -1,0 +1,25 @@
+.headerBar {
+    width: auto;
+    height: 44px;
+    background-color: #333333;
+    margin-bottom: 1%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appleIcon {
+    color: lightgrey;
+}
+
+.itunesText {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+.appleIcon:hover, .itunesText:hover  {
+    color: white;
+}
+
+

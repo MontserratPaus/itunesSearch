@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import * as React from 'react';
+import {SearchInput, ListOfResults, HeaderBar, Footer} from "./components";
+
 import './App.css';
 
 function App() {
+  const [data, setData] = React.useState([]);
+  const [errorMessage, setErrorMessage] = React.useState("");
+
+  async function itunesApiRequest(term) {
+    const url = new URL('https://itunes.apple.com/search');
+    const params = {
+      term,
+      limit: 20,
+      offset: 0
+    };
+    try {
+      url.search = new URLSearchParams(params);
+      const response = await fetch(url);
+      const dataBackEnd = await response.json();
+      setData(dataBackEnd.results);
+      setErrorMessage("")
+    } catch (error) {
+      setErrorMessage("No Search results")
+      setData([]);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="app">
+        <HeaderBar />
+        <SearchInput onClickSearch={itunesApiRequest}/>
+        <ListOfResults data={data} errorMessage={errorMessage} />
+        <Footer />
+      </div>
   );
 }
 

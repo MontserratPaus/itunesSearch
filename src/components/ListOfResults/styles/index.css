@@ -1,0 +1,48 @@
+.divListOfResults {
+    margin-top: 1%;
+    min-height: calc(100vh - 270px);
+}
+
+.iconsGridList {
+    text-align: center;
+}
+
+.gridResults {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 10px 30px 50px;
+    gap: 10px;
+}
+.cardGridResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: lightgrey !important;
+}
+
+.listResults {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 50px;
+    gap: 10px;
+}
+
+.cardListResults {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background: lightgrey !important;
+}
+
+.cardImg {
+    heigh: 150px;
+    width: 150px !important;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+}
