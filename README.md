@@ -28,3 +28,4 @@ You may also see any lint errors in the console.
 ## TO DO:
 - Show more than 20 results
 - Add a paging component to switch between pages of results
+- Unit testing
